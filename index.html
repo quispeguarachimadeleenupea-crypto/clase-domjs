@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO - LIST</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row justity-content-center">
+            <div class="col-md-6">
+                <!-- Tarjeta  -->
+                 <div class="card shadow">
+                    <div class="card-body">
+                        <h2 class="card-title text-center mb-4">Mi Lista de tareas</h2>
+
+                        <!-- // Agregar tarea -->
+                        <div class="input-group mb-3">
+                            <input type="text" id="input-area" class="form-control" placeholder="Escribe una tarea...">
+                            <button id="btn-agregar" class="btn btn-primary">Añadir</button>
+                        </div>
+
+                        <!-- // Mostrar el listado -->
+                         <ul id="lista-tareas" class="list-group">
+                            
+                         </ul>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript + DOM</title>
+</head>
+<body>
+    <div id="contenedor">
+        <h2>hola como estas?</h2>
+        <button id="btn-enviar">
+            Enviar
+        </button>
+    </div>
+
+    <script>
+        const title = document.querySelector("h2");
+        /* console.log(title); */
+
+        // Para agregar la clase activa
+        title.classList.add("activa");
+        title.classList.add("disabled");
+
+        // Para remover la clase disabled
+        title.classList.remove("disabled");
+
+        // Para alternar una clase
+        // title.classList.add("dark");
+        title.classList.toggle("dark");
+
+        // Ejemplo Creacion de nodo desde 0
+        const contender = document.getElementById("contenedor");
+        const tarjeta = document.createElement('div');
+
+        tarjeta.classList.add("card-style");
+        tarjeta.textContent = "Hola desde el DOM de JS";
+
+        contender.appendChild(tarjeta);
+
+        const btnEnviar = document.getElementById("btn-enviar");
+        /* console.log(btnEnviar); */
+
+        btnEnviar.addEventListener('click', () => {
+            console.log("!Formulario Enviado!!");
+            btnEnviar.classList.add('active');
+            tarjeta.style.backgroundColor = "black";
+            tarjeta.style.color = "white";
+            tarjeta.style.padding = "5px";
+            tarjeta.style.margin = "5px";
+            tarjeta.style.borderRadius = "10px";
+        })
+
+
+        
+
+
+    </script>
+</body>
+</html>
