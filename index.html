@@ -1,36 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TODO - LIST</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-</head>
-<body class="bg-light">
-    <div class="container mt-5">
-        <div class="row justity-content-center">
-            <div class="col-md-6">
-                <!-- Tarjeta  -->
-                 <div class="card shadow">
-                    <div class="card-body">
-                        <h2 class="card-title text-center mb-4">Mi Lista de tareas</h2>
+    <title>Carrito de Compras con Bootstrap</title>
 
-                        <!-- // Agregar tarea -->
-                        <div class="input-group mb-3">
-                            <input type="text" id="input-area" class="form-control" placeholder="Escribe una tarea...">
-                            <button id="btn-agregar" class="btn btn-primary">Añadir</button>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <div class="row">
+
+            <!-- PRODUCTOS -->
+            <div class="col-md-7">
+                <h2 class="mb-4">Tienda de Cursos</h2>
+
+                <div class="row g-3">
+
+                    <!-- PRODUCTO 1 -->
+                    <div class="col-sm-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+
+                                <h5 class="card-title">
+                                    Curso de React
+                                </h5>
+
+                                <p class="card-text fs-4 text-primary fw-bold">
+                                    $50
+                                </p>
+
+                                <button
+                                    class="btn btn-success w-100 btn-agregar"
+                                    data-nombre="Curso de React"
+                                    data-precio="50">
+                                    Agregar al Carrito
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PRODUCTO 2 -->
+                    <div class="col-sm-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+
+                                <h5 class="card-title">
+                                    Curso de n8n
+                                </h5>
+
+                                <p class="card-text fs-4 text-primary fw-bold">
+                                    $40
+                                </p>
+
+                                <button
+                                    class="btn btn-success w-100 btn-agregar"
+                                    data-nombre="Curso de n8n"
+                                    data-precio="40">
+                                    Agregar al Carrito
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CARRITO -->
+            <div class="col-md-5">
+
+                <div class="card shadow">
+
+                    <div class="card-body">
+
+                        <h2 class="card-title mb-4">
+                            Tu Carrito
+                        </h2>
+
+                        <div class="table-responsive">
+
+                            <table class="table table-hover align-middle">
+
+                                <thead class="table-dark">
+
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Precio</th>
+                                        <th>Acción</th>
+                                    </tr>
+
+                                </thead>
+
+                                <tbody id="cuerpo-carrito">
+                                </tbody>
+
+                            </table>
+
                         </div>
 
-                        <!-- // Mostrar el listado -->
-                         <ul id="lista-tareas" class="list-group">
-                            
-                         </ul>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+
+                            <h4 class="m-0">
+                                Total a Pagar:
+                            </h4>
+
+                            <span class="badge bg-primary fs-3">
+                                $<span id="total-carrito">0</span>
+                            </span>
+
+                        </div>
+
                     </div>
-                 </div>
+
+                </div>
+
             </div>
+
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <!-- JAVASCRIPT DEL CARRITO -->
+    <script src="app-tarea.js"></script>
+
 </body>
 </html>
